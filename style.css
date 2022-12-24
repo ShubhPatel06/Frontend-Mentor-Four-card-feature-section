@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 70rem;
+  display: grid;
+  grid-template-areas:
+    "information information information"
+    "supervisor team-builder calculator"
+    "supervisor karma calculator";
+}
+
+.container .information {
+  grid-area: information;
+  text-align: center;
+}
+
+.container .information .info {
+  font-size: 2rem;
+  color: hsl(229, 6%, 66%);
+  font-weight: 200;
+}
+
+.container .information .title {
+  font-size: 2rem;
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.container .information .message {
+  color: hsl(229, 6%, 66%);
+  padding: 0 18rem;
+  margin-bottom: 3rem;
+}
+
+.container .box {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 6px 10px hsl(229, 8%, 72%);
+  margin: 1rem;
+  padding: 1.8rem;
+  border-radius: 0.4rem;
+  width: 21rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container .box .sub-title {
+  font-size: 1.4rem;
+  color: hsl(234, 12%, 34%);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.container .box .description {
+  font-size: 0.85rem;
+  color: hsl(229, 6%, 66%);
+  margin-bottom: 1.5rem;
+}
+
+.container .box .feature-image {
+  align-self: flex-end;
+}
+
+.container .supervisor {
+  grid-area: supervisor;
+  border-top: 0.3rem solid hsl(180, 62%, 55%);
+  align-self: center;
+}
+
+.container .team-builder {
+  grid-area: team-builder;
+  border-top: 0.3rem solid hsl(0, 78%, 62%);
+}
+
+.container .karma {
+  grid-area: karma;
+  border-top: 0.3rem solid hsl(34, 97%, 64%);
+}
+
+.container .calculator {
+  grid-area: calculator;
+  border-top: 0.3rem solid hsl(212, 86%, 64%);
+  align-self: center;
+}
+
+@media (max-width: 34rem) {
+  body {
+    height: auto;
+  }
+
+  .container {
+    max-width: 25rem;
+    margin: 0 auto;
+    grid-template-areas:
+      "information"
+      "supervisor"
+      "team-builder"
+      "karma"
+      "calculator";
+  }
+
+  .container .information {
+    grid-area: information;
+    text-align: center;
+    width: 100%;
+  }
+
+  .container .information .info {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+  }
+
+  .container .information .title {
+    font-size: 1.3rem;
+  }
+
+  .container .information .message {
+    color: hsl(229, 6%, 66%);
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .container .box {
+    margin: 1rem auto;
+  }
+
+  .container .supervisor {
+    grid-area: supervisor;
+  }
+
+  .container .team-builder {
+    grid-area: team-builder;
+  }
+
+  .container .karma {
+    grid-area: karma;
+  }
+
+  .container .calculator {
+    grid-area: calculator;
+    margin-bottom: 2rem;
+  }
+}
